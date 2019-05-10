@@ -1,4 +1,4 @@
-# pluginJavaScript.github.io
+# pluginJavaScript
 
 A aplicação está hospedad no github pages.
 
