@@ -24,6 +24,8 @@ function createButtonActiv() {
   btn.style.color = "white";
   btn.style.textAlign = "center";
   btn.style.fontSize = "12px";
+  btn.style.transition = "0.2s ease-out";
+  btn.style.webkitTransition = "0.2s ease-out";
   btn.appendChild(lbl);
 
   //Adicionando funcionalidades quando o botão for habilitado
