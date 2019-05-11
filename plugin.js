@@ -1,8 +1,7 @@
-//Criando a constante para pegar todas as tags
-const p = document.getElementsByTagName("p");
+//Criando constantes para pegar tags
+const body = document.querySelector("body");
 const h5 = document.getElementsByTagName("h5");
-const b = document.getElementsByTagName("b");
-const div = document.getElementsByTagName("div");
+const p = document.getElementsByTagName("p");
 const span = document.getElementsByTagName("span");
 const a = document.getElementsByTagName("a");
 const img = document.getElementsByTagName("img");
@@ -33,80 +32,61 @@ function createButtonActiv() {
     this.classList.toggle("active");
     btn.style.background = "#15df8b";
     const ativ = btn.getAttribute("class");
+
     if (ativ == "active") {
-      for (i of p) {
-        i.style.fontFamily = "Arial"; //Adicionando Css para modificar Font
-        i.style.fontSize = "1.2em";
-      }
+      body.style.fontFamily = "Arial"; //Adicionando Css para modificar Font
+      body.style.fontSize = "1.2em"; //Adicionando Css para modificar tamanho da fonte
 
       for (i of h5) {
-        i.style.fontSize = "1.2em"; //Adicionando Css para modificar tamanho da fonte
-        i.style.fontFamily = "Arial";
+        i.style.fontSize = "1.25em";
       }
 
-      for (i of b) {
+      for (i of p) {
         i.style.fontFamily = "Arial";
-        i.style.fontSize = "1.2em";
       }
 
       for (i of span) {
-        i.style.fontFamily = "Arial";
-        i.style.fontSize = "1.2em";
-      }
-
-      for (i of div) {
-        i.style.fontSize = "1.2em";
         i.style.fontFamily = "Arial";
       }
 
       for (i of a) {
         i.style.backgroundColor = "#fff43c"; //Adicionando Css para adicionar highlights
-        i.style.fontFamily = "Arial";
-        i.style.fontSize = "1.2em";
       }
 
       for (i of img) {
-        const alt = i.getAttribute("alt"); //Criando a constante para pegar o conteudo do atributo alt
-        //Confere se tem o atributo alt está sem texto
+        const alt = i.getAttribute("alt"); //Criando a constante que pega o conteudo do atributo alt
+        //Confere se o atributo alt está sem texto
         if (alt == 0) {
-          i.style.width = "105%"; //Adicionando Css para aumentar tamanho da imagem
-          i.style.boxShadow = "4px 4px 10px rgba(0, 0, 0, 0.596)"; //Adicionando Css para colocar boxShadow
-          i.style.border = "1px solid white"; //Adicionando Css para colocar borda
+          //Destacando imagens
+          i.style.width = "105%";
+          i.style.boxShadow = "4px 4px 10px rgba(0, 0, 0, 0.596)";
+          i.style.border = "1px solid white";
+          i.style.transition = "0.2s ease-out";
+          i.style.webkitTransition = "0.2s ease-out";
         }
       }
     } else {
       //Removendo funcionalidades quando o botão for desabilitado
 
       btn.style.background = "#e22626"; //Mundo cor do botão quando for desabilitado
-      for (i of p) {
-        i.style.fontFamily = ""; //Retira modificação do plugin
-        i.style.fontSize = "";
-      }
+
+      body.style.fontFamily = "";
+      body.style.fontSize = "";
 
       for (i of h5) {
         i.style.fontSize = "";
-        i.style.fontFamily = "";
       }
 
-      for (i of b) {
+      for (i of p) {
         i.style.fontFamily = "";
-        i.style.fontSize = "";
       }
 
       for (i of span) {
-        i.style.fontFamily = "";
-        i.style.fontSize = "";
-      }
-
-      for (i of div) {
-        i.style.fontSize = "";
         i.style.fontFamily = "";
       }
 
       for (i of a) {
         i.style.backgroundColor = "";
-        i.style.fontSize = "";
-        i.style.fontFamily = "";
       }
 
       for (i of img) {
