@@ -82,7 +82,7 @@ function createButtonActiv() {
       }
 
       for (i of span) {
-        i.style.fontFamily = "";
+        i.style.fontFamily = "Just Another Hand, cursive";
       }
 
       for (i of a) {
