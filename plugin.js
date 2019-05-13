@@ -1,10 +1,10 @@
 //Criando constantes para pegar tags
 const body = document.querySelector("body");
-const h5 = document.getElementsByTagName("h5");
-const p = document.getElementsByTagName("p");
-const span = document.getElementsByTagName("span");
-const a = document.getElementsByTagName("a");
-const img = document.getElementsByTagName("img");
+const h5 = document.querySelectorAll("h5");
+const p = document.querySelectorAll("p");
+const span = document.querySelectorAll("span");
+const a = document.querySelectorAll("a");
+const img = document.querySelectorAll("img");
 
 //Criando o botão
 function createButtonActiv() {
@@ -34,67 +34,65 @@ function createButtonActiv() {
     const ativ = btn.getAttribute("class");
 
     if (ativ == "active") {
-      body.style.fontFamily = "Arial"; //Adicionando Css para modificar Font
-      body.style.fontSize = "1.2em"; //Adicionando Css para modificar tamanho da fonte
+      body.style.fontFamily = "Arial";
+      body.style.fontSize = "1.2em";
 
-      for (i of h5) {
-        i.style.fontSize = "1.25em";
+      for (var i = 0; i < h5.length; i++) {
+        h5[i].style.fontSize = "1.25em";
       }
 
-      for (i of p) {
-        i.style.fontFamily = "Arial";
+      for (var i = 0; i < p.length; i++) {
+        p[i].style.fontFamily = "Arial";
       }
 
-      for (i of span) {
-        i.style.fontFamily = "Arial";
+      for (var i = 0; i < span.length; i++) {
+        span[i].style.fontFamily = "Arial";
       }
 
-      for (i of a) {
-        i.style.backgroundColor = "#fff43c"; //Adicionando Css para adicionar highlights
+      for (var i = 0; i < a.length; i++) {
+        a[i].style.backgroundColor = "#fff43c"; //Adicionando Css para adicionar highlights
       }
 
-      for (i of img) {
-        const alt = i.getAttribute("alt"); //Criando a constante que pega o conteudo do atributo alt
-        //Confere se o atributo alt está sem texto
+      for (var i = 0; i < img.length; i++) {
+        const alt = img[i].getAttribute("alt"); //Criando a constante que pega o conteudo do atributo alt
         if (alt == 0) {
-          //Destacando imagens
-          i.style.width = "105%";
-          i.style.boxShadow = "4px 4px 10px rgba(0, 0, 0, 0.596)";
-          i.style.border = "1px solid white";
-          i.style.transition = "0.2s ease-out";
-          i.style.webkitTransition = "0.2s ease-out";
+          img[i].style.width = "105%";
+          img[i].style.boxShadow = "4px 4px 10px rgba(0, 0, 0, 0.596)";
+          img[i].style.border = "1px solid white";
+          img[i].style.transition = "0.2s ease-out";
+          img[i].style.webkitTransition = "0.2s ease-out";
         }
       }
     } else {
       //Removendo funcionalidades quando o botão for desabilitado
-
       btn.style.background = "#e22626"; //Mundo cor do botão quando for desabilitado
-
       body.style.fontFamily = "";
       body.style.fontSize = "";
 
-      for (i of h5) {
-        i.style.fontSize = "";
+      for (var i = 0; i < h5.length; i++) {
+        h5[i].style.fontSize = "";
       }
 
-      for (i of p) {
-        i.style.fontFamily = "";
+      for (var i = 0; i < p.length; i++) {
+        p[i].style.fontFamily = "";
       }
 
-      for (i of span) {
-        i.style.fontFamily = "Just Another Hand, cursive";
+      for (var i = 0; i < span.length; i++) {
+        span[i].style.fontFamily = "Just Another Hand, cursive";
       }
 
-      for (i of a) {
-        i.style.backgroundColor = "";
+      for (var i = 0; i < a.length; i++) {
+        a[i].style.backgroundColor = "";
       }
 
-      for (i of img) {
-        const alt = i.getAttribute("alt");
+      for (var i = 0; i < img.length; i++) {
+        const alt = img[i].getAttribute("alt"); //Criando a constante que pega o conteudo do atributo alt
         if (alt == 0) {
-          i.style.width = "100%";
-          i.style.boxShadow = "";
-          i.style.border = "";
+          img[i].style.width = "100%";
+          img[i].style.boxShadow = "";
+          img[i].style.border = "";
+          img[i].style.transition = "0.2s ease-in";
+          img[i].style.webkitTransition = "0.2s ease-in";
         }
       }
     }
