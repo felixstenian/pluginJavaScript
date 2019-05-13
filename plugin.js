@@ -39,14 +39,20 @@ function createButtonActiv() {
 
       for (var i = 0; i < h5.length; i++) {
         h5[i].style.fontSize = "1.25em";
+        h5[i].style.transition = "0.1s ease-out";
+        h5[i].style.webkitTransition = "0.1s ease-out";
       }
 
       for (var i = 0; i < p.length; i++) {
         p[i].style.fontFamily = "Arial";
+        p[i].style.transition = "0.1s ease-out";
+        p[i].style.webkitTransition = "0.1s ease-out";
       }
 
       for (var i = 0; i < span.length; i++) {
         span[i].style.fontFamily = "Arial";
+        span[i].style.transition = "0.1s ease-out";
+        span[i].style.webkitTransition = "0.1s ease-out";
       }
 
       for (var i = 0; i < a.length; i++) {
@@ -91,8 +97,6 @@ function createButtonActiv() {
           img[i].style.width = "100%";
           img[i].style.boxShadow = "";
           img[i].style.border = "";
-          img[i].style.transition = "0.2s ease-in";
-          img[i].style.webkitTransition = "0.2s ease-in";
         }
       }
     }
